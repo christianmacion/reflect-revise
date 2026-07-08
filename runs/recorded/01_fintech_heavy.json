@@ -1,0 +1,52 @@
+{
+  "mode": "offline",
+  "threshold": 15,
+  "min_delta": 2,
+  "max_iters": 3,
+  "stop_reason": "threshold",
+  "initial_slop": 239,
+  "final_slop": 5,
+  "total_delta": -234,
+  "n_revisions": 2,
+  "improved": true,
+  "iterations": [
+    {
+      "iteration": 0,
+      "slop_index": 239,
+      "delta": null,
+      "verdict": "HEAVY SLOP \u2014 rewrite",
+      "critique": "SLOP INDEX 239 (HEAVY SLOP \u2014 rewrite). Fix: drop the 'X: The Ultimate Guide' title formula; stop announcing intent ('this article will explore') \u2014 just assert [3: this article will, this article will explore, we'll explore]; replace vague attributions ('experts say') with a named source [6: analysts believe, experts say, markets reacted, studies show]; cut filler phrases ('moreover', \"it's worth noting\") [12: at the end of the day, furthermore, in a world where, in conclusion]; break the 'not X, it's Y' reframe into a plain statement [2: isn't X ... it's Y, it's not X. it's Y]; swap AI-tell words (delve/robust/tapestry) for plain ones [30: comprehensive, confluence, cutting-edge, delve]; remove reader commands ('sit with this', 'stay with me') [2: sit with that, stay with me]; vary sentence length \u2014 variance is too uniform (CV<0.4); break the monotony run of 4 same-length sentences; reduce -ing sentence openers (7.7%).",
+      "est_cost_usd": 0.0,
+      "est_latency_s": 0.0,
+      "draft": "# Fintech APIs: The Ultimate Guide to Mastering Payments\n\nIn today's fast-paced world, this article will explore how to leverage modern fintech APIs to unlock seamless payment experiences. It's worth noting that the payments landscape is an ever-evolving ecosystem, and we'll explore the pivotal shifts that are transforming the realm of digital money.\n\nMoreover, experts say that the most robust platforms harness a comprehensive, holistic approach. Furthermore, analysts believe that this paradigm represents a game-changing trajectory. It's not just a tool, it's a testament to innovation. This isn't a product, it's a transformative confluence of synergy.\n\nIn a world where the market shrugged at older systems, studies show that cutting-edge APIs resonate with developers. The short answer is that you should delve into the documentation. Stay with me here, because what does this mean for you matters. Sit with that for a moment.\n\nStreamlining your integration will foster growth and elevate your stack. Needless to say, that being said, at the end of the day, the markets reacted to these intricate, nuanced, multifaceted changes. In conclusion, this stands as a testament to the unparalleled, ever-evolving nature of the space.\n"
+    },
+    {
+      "iteration": 1,
+      "slop_index": 98,
+      "delta": -141,
+      "verdict": "HEAVY SLOP \u2014 rewrite",
+      "critique": "SLOP INDEX 98 (HEAVY SLOP \u2014 rewrite). Fix: swap AI-tell words (delve/robust/tapestry) for plain ones [29: comprehensive, confluence, cutting-edge, delve]; remove reader commands ('sit with this', 'stay with me') [2: sit with that, stay with me]; reduce -ing sentence openers (8.3%).",
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4,
+      "draft": "# Fintech APIs\n\nToday, here is how to leverage modern fintech APIs to unlock seamless payment experiences. the payments landscape is an ever-evolving ecosystem, and we cover the pivotal shifts that are transforming the realm of digital money.\n\nAlso, the 2024 BIS report says that the most robust platforms harness a comprehensive, holistic approach. Also, Goldman's desk note argues that this paradigm represents a game-changing trajectory. it's a testament to innovation. This it's a transformative confluence of synergy.\n\nWhen the S&P was flat at older systems, a 2023 NBER paper shows that cutting-edge APIs resonate with developers. that you should delve into the documentation. Stay with me here, because what this means matters. Sit with that for a moment.\n\nStreamlining your integration will foster growth and elevate your stack., still, ultimately, the S&P fell 2% to these intricate, nuanced, multifaceted changes. this shows the unparalleled, ever-evolving nature of the space."
+    },
+    {
+      "iteration": 2,
+      "slop_index": 5,
+      "delta": -93,
+      "verdict": "CLEAN",
+      "critique": "SLOP INDEX 5 (CLEAN). Fix: reduce -ing sentence openers (8.3%).",
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4,
+      "draft": "# Fintech APIs\n\nToday, here is how to use modern fintech APIs to open smooth payment experiences. the payments field is an changing system, and we cover the key shifts that are transforming the area of digital money.\n\nAlso, the 2024 BIS report says that the most solid platforms use a full, whole approach. Also, Goldman's desk note argues that this model represents a important path. it's a sign to innovation. This it's a big overlap of fit.\n\nWhen the S&P was flat at older systems, a 2023 NBER paper shows that new APIs land with developers. that you should look into the documentation. here, because what this means matters. for a moment.\n\nSimplifying your integration will build growth and raise your stack., still, ultimately, the S&P fell 2% to these complex, subtle, varied changes. this shows the rare, changing nature of the space."
+    }
+  ],
+  "curve": [
+    239,
+    98,
+    5
+  ],
+  "total_cost_usd": 0.0018,
+  "total_latency_s": 2.8,
+  "seed": "01_fintech_heavy.md"
+}

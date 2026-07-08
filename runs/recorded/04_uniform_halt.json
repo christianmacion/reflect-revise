@@ -1,0 +1,41 @@
+{
+  "mode": "offline",
+  "threshold": 15,
+  "min_delta": 2,
+  "max_iters": 3,
+  "stop_reason": "no_progress",
+  "initial_slop": 39,
+  "final_slop": 39,
+  "total_delta": 0,
+  "n_revisions": 1,
+  "improved": false,
+  "iterations": [
+    {
+      "iteration": 0,
+      "slop_index": 39,
+      "delta": null,
+      "verdict": "MINOR TELLS",
+      "critique": "SLOP INDEX 39 (MINOR TELLS). Fix: vary sentence length \u2014 variance is too uniform (CV<0.4); break the monotony run of 12 same-length sentences.",
+      "est_cost_usd": 0.0,
+      "est_latency_s": 0.0,
+      "draft": "# Notes on Caching\n\nThe cache stores recent results in memory for fast reads. The cache evicts old entries when it runs out of room. The cache uses a least-recently-used policy by default here. The cache can be tuned with a size limit and a time limit too.\n\nReads check the cache first before they hit the slower backing store. Writes update the cache and the store at the same time for safety. Misses fall through to the store and then fill the cache again. Hits return the stored value right away without any extra work.\n\nThe system tracks a hit rate so you can see how well it works. The hit rate climbs as the working set fits inside the cache size. The hit rate falls when the working set grows past the cache size. The rate is the main number to watch when you tune the limits.\n"
+    },
+    {
+      "iteration": 1,
+      "slop_index": 39,
+      "delta": 0,
+      "verdict": "MINOR TELLS",
+      "critique": "SLOP INDEX 39 (MINOR TELLS). Fix: vary sentence length \u2014 variance is too uniform (CV<0.4); break the monotony run of 12 same-length sentences.",
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4,
+      "draft": "# Notes on Caching\n\nThe cache stores recent results in memory for fast reads. The cache evicts old entries when it runs out of room. The cache uses a least-recently-used policy by default here. The cache can be tuned with a size limit and a time limit too.\n\nReads check the cache first before they hit the slower backing store. Writes update the cache and the store at the same time for safety. Misses fall through to the store and then fill the cache again. Hits return the stored value right away without any extra work.\n\nThe system tracks a hit rate so you can see how well it works. The hit rate climbs as the working set fits inside the cache size. The hit rate falls when the working set grows past the cache size. The rate is the main number to watch when you tune the limits."
+    }
+  ],
+  "curve": [
+    39,
+    39
+  ],
+  "total_cost_usd": 0.0009,
+  "total_latency_s": 1.4,
+  "seed": "04_uniform_halt.md"
+}

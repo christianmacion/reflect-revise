@@ -1,0 +1,12 @@
+# reflect-revise dependencies
+#
+# The reflection LOOP, stop conditions, scorer (slop_engine), offline reviser,
+# and the eval/curve metric are PURE PYTHON STDLIB — they need none of the below.
+# You can run `python3 eval/curve.py` with a bare interpreter, no installs.
+#
+# streamlit : only for the interactive app (app.py).
+# anthropic : only for LIVE mode (Claude author+critic), lazy-imported and gated
+#             on ANTHROPIC_API_KEY. The offline path never imports it.
+
+streamlit>=1.30
+anthropic>=0.39   # live mode only

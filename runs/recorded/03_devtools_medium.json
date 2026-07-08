@@ -1,0 +1,41 @@
+{
+  "mode": "offline",
+  "threshold": 15,
+  "min_delta": 2,
+  "max_iters": 3,
+  "stop_reason": "threshold",
+  "initial_slop": 18,
+  "final_slop": 12,
+  "total_delta": -6,
+  "n_revisions": 1,
+  "improved": true,
+  "iterations": [
+    {
+      "iteration": 0,
+      "slop_index": 18,
+      "delta": null,
+      "verdict": "MINOR TELLS",
+      "critique": "SLOP INDEX 18 (MINOR TELLS). Fix: stop announcing intent ('this article will explore') \u2014 just assert [1: this post will]; cut filler phrases ('moreover', \"it's worth noting\") [3: furthermore, it's worth noting, moreover].",
+      "est_cost_usd": 0.0,
+      "est_latency_s": 0.0,
+      "draft": "# Choosing a Build Tool\n\nThis post will explore the trade-offs between common build tools for a mid-size codebase.\n\nThe first thing to know is that no tool is perfect. Some teams want speed, others want plugin support, and a few want both. It's worth noting that the defaults matter more than most people think, because the defaults are what new contributors hit on day one.\n\nMoreover, caching behavior differs a lot between tools. Furthermore, the way each tool handles incremental builds will shape your CI bill. We benchmarked three options on a 40-package monorepo and the spread was wide.\n\nThe point is simple. Pick the tool your team will actually configure, measure the cold-build and warm-build times yourself, and revisit the choice once a quarter. A fast tool nobody tunes is slower than a slow tool that is tuned well.\n"
+    },
+    {
+      "iteration": 1,
+      "slop_index": 12,
+      "delta": -6,
+      "verdict": "CLEAN",
+      "critique": "SLOP INDEX 12 (CLEAN). Fix: vary sentence length \u2014 variance is too uniform (CV<0.4).",
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4,
+      "draft": "# Choosing a Build Tool\n\nThis covers explore the trade-offs between common build tools for a mid-size codebase.\n\nThe first thing to know is that no tool is perfect. Some teams want speed, others want plugin support, and a few want both. the defaults matter more than most people think, because the defaults are what new contributors hit on day one.\n\nAlso, caching behavior differs a lot between tools. Also, the way each tool handles incremental builds will shape your CI bill. We benchmarked three options on a 40-package monorepo and the spread was wide.\n\nThe point is simple. Pick the tool your team will actually configure, measure the cold-build and warm-build times yourself, and revisit the choice once a quarter. A fast tool nobody tunes is slower than a slow tool that is tuned well."
+    }
+  ],
+  "curve": [
+    18,
+    12
+  ],
+  "total_cost_usd": 0.0009,
+  "total_latency_s": 1.4,
+  "seed": "03_devtools_medium.md"
+}

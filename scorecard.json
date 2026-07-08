@@ -1,0 +1,92 @@
+{
+  "n_drafts": 4,
+  "mode": "offline",
+  "threshold": 15,
+  "min_delta": 2,
+  "max_iters": 3,
+  "mean_initial_slop": 127.5,
+  "mean_final_slop": 14.0,
+  "pct_improved": 75.0,
+  "n_improved": 3,
+  "n_reached_threshold": 3,
+  "no_progress_halt_rate": 25.0,
+  "n_no_progress_halt": 1,
+  "n_max_iters": 0,
+  "avg_revisions_to_threshold": 1.67,
+  "est_cost_per_quality_point_usd": 1e-05,
+  "est_latency_per_quality_point_s": 0.0154,
+  "negative_cases": [
+    {
+      "seed": "04_uniform_halt.md",
+      "reasons": [
+        "no net improvement",
+        "halted on no-progress still above threshold (final 39)"
+      ],
+      "curve": [
+        39,
+        39
+      ],
+      "stop_reason": "no_progress"
+    }
+  ],
+  "per_draft": [
+    {
+      "seed": "01_fintech_heavy.md",
+      "curve": [
+        239,
+        98,
+        5
+      ],
+      "initial_slop": 239,
+      "final_slop": 5,
+      "n_revisions": 2,
+      "stop_reason": "threshold",
+      "improved": true,
+      "est_cost_usd": 0.0018,
+      "est_latency_s": 2.8
+    },
+    {
+      "seed": "02_market_recap_heavy.md",
+      "curve": [
+        214,
+        66,
+        0
+      ],
+      "initial_slop": 214,
+      "final_slop": 0,
+      "n_revisions": 2,
+      "stop_reason": "threshold",
+      "improved": true,
+      "est_cost_usd": 0.0018,
+      "est_latency_s": 2.8
+    },
+    {
+      "seed": "03_devtools_medium.md",
+      "curve": [
+        18,
+        12
+      ],
+      "initial_slop": 18,
+      "final_slop": 12,
+      "n_revisions": 1,
+      "stop_reason": "threshold",
+      "improved": true,
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4
+    },
+    {
+      "seed": "04_uniform_halt.md",
+      "curve": [
+        39,
+        39
+      ],
+      "initial_slop": 39,
+      "final_slop": 39,
+      "n_revisions": 1,
+      "stop_reason": "no_progress",
+      "improved": false,
+      "est_cost_usd": 0.0009,
+      "est_latency_s": 1.4
+    }
+  ]
+}
